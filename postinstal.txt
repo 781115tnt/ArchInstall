@@ -1,3 +1,4 @@
+!!! IMPORTANT: GNOME 47 - DO NOT ENABLE "ONSCREEN KEYBOARD" DURING LOGIN IN GDM SESSION OTHERWISE GDM WILL BE BROKEN!!!
 + Update Arch keyring: sudo pacman -Sy archlinux-keyring
 
 + Keep GNOME 46:
