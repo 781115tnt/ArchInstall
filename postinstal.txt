@@ -22,7 +22,10 @@ sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm
 	yay --version
 
 
-#sudo pacman -S gnome-boxes
++Gnome Boxes:
+	#sudo pacman -S gnome-boxes
+	#Install spice-vdagent for linux guest
+
 #yay -S  ibus-bamboo ibus-daemon 
 
 yay -S debtap freedownloadmanager adwaita-qt5 adwaita-qt6 brave-bin
