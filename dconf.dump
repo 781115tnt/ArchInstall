@@ -18,7 +18,14 @@ last-save-directory='file:///home/thanhtran/ArchInstall/scripts/@snapshot'
 
 [org/gnome/baobab/ui]
 is-maximized=false
-window-size=(960, 958)
+window-size=(906, 958)
+
+[org/gnome/boxes]
+first-run=false
+view='icon-view'
+window-maximized=false
+window-position=[26, 23]
+window-size=[768, 600]
 
 [org/gnome/calculator]
 accuracy=12
@@ -38,14 +45,14 @@ window-size=(360, 610)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='wifi'
-window-state=(1462, 1069, false)
+last-panel='display'
+window-state=(1080, 1227, false)
 
 [org/gnome/desktop/a11y]
 always-show-universal-access-status=true
 
 [org/gnome/desktop/a11y/applications]
-screen-keyboard-enabled=true
+screen-keyboard-enabled=false
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus', 'b401dc00-1c8b-4543-99d2-a0fad2197e53', '4fe1e75a-5c55-4ade-859f-637897c335ac']
@@ -94,7 +101,7 @@ font-name='Roboto Condensed 11'
 gtk-theme='Adwaita-dark'
 icon-theme='Papirus-Dark'
 text-scaling-factor=1.25
-toolkit-accessibility=true
+toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-gnome-console', 'org-qbittorrent-qbittorrent', 'firefox', 'tor-browser', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-baobab', 'timeshift-gtk', 'org-gnome-texteditor']
@@ -155,6 +162,19 @@ window-size=(1390, 858)
 [org/gnome/evolution-data-server]
 migrated=true
 
+[org/gnome/gnome-system-monitor]
+show-dependencies=false
+show-whose-processes='user'
+window-height=1058
+
+[org/gnome/gnome-system-monitor/proctree]
+col-26-visible=false
+col-26-width=0
+
+[org/gnome/meld/window-state]
+height=604
+width=1075
+
 [org/gnome/mutter]
 center-new-windows=true
 
@@ -169,7 +189,7 @@ show-create-link=true
 show-delete-permanently=true
 
 [org/gnome/nautilus/window-state]
-initial-size=(890, 924)
+initial-size=(1331, 950)
 
 [org/gnome/portal/filechooser/brave-browser]
 last-folder-path='/home/thanhtran/Downloads'
@@ -183,8 +203,8 @@ sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
 app-picker-layout=[{'org.gnome.clocks.desktop': <{'position': <0>}>, 'org.gnome.Snapshot.desktop': <{'position': <1>}>, 'org.gnome.Extensions.desktop': <{'position': <2>}>, 'htop.desktop': <{'position': <3>}>, 'org.gnome.Settings.desktop': <{'position': <4>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>, 'yelp.desktop': <{'position': <7>}>, 'b401dc00-1c8b-4543-99d2-a0fad2197e53': <{'position': <8>}>, '4fe1e75a-5c55-4ade-859f-637897c335ac': <{'position': <9>}>, 'freedownloadmanager.desktop': <{'position': <10>}>, 'timeshift-gtk.desktop': <{'position': <11>}>, 'org.gnome.Boxes.desktop': <{'position': <12>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <13>}>, 'org.gnome.Meld.desktop': <{'position': <14>}>}]
-disabled-extensions=@as []
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'arch-update@RaphaelRochet', 'rounded-window-corners@fxgn', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com', 'clipboard-indicator@tudmotu.com']
+disabled-extensions=['rounded-window-corners@fxgn']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'arch-update@RaphaelRochet', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com', 'clipboard-indicator@tudmotu.com']
 favorite-apps=['org.gnome.Calculator.desktop', 'org.gnome.Console.desktop', 'org.gnome.DiskUtility.desktop', 'vlc.desktop', 'smplayer.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'brave-browser.desktop', 'firefox.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
@@ -220,7 +240,7 @@ intellihide-hide-from-windows=true
 leftbox-padding=-1
 panel-anchors='{"0":"MIDDLE"}'
 panel-lengths='{"0":100}'
-panel-sizes='{"0":48}'
+panel-sizes='{"0":54}'
 primary-monitor=0
 status-icon-padding=-1
 trans-bg-color='#1c71d8'
@@ -231,7 +251,11 @@ tray-padding=-1
 window-preview-title-position='TOP'
 
 [org/gnome/shell/extensions/rounded-window-corners-reborn]
+border-width=0
+global-rounded-corner-settings={'padding': <{'left': uint32 1, 'right': 1, 'top': 1, 'bottom': 1}>, 'keepRoundedCorners': <{'maximized': false, 'fullscreen': false}>, 'borderRadius': <uint32 12>, 'smoothing': <0.0>, 'enabled': <true>}
 settings-version=uint32 6
+skip-libadwaita-app=true
+skip-libhandy-app=false
 
 [org/gnome/shell/world-clocks]
 locations=@av []
