@@ -257,7 +257,7 @@ sudo pacman -S virt-manager dnsmasq bridge-utils qemu-desktop
 	  <model type="qxl" ram="262144" vram="262144" vgamem="65536" heads="1" primary="yes"/>
 	  <address type="pci" domain="0x0000" bus="0x00" slot="0x01" function="0x0"/>
 	</video>
-
+ WINDOWS DRIVER: https://www.spice-space.org/download.html
 	
 + Change default audio sample rate
 Edit /etc/pulse/daemon.conf: default-sample-format = s32le, default-sample-rate = 96000, alternate-sample-rate = 48000
