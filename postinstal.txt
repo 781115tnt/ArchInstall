@@ -267,6 +267,10 @@ Check current bitrate: pactl list sink-inputs, pactl list sources
 + To set Files can paste path:
 	gsettings set org.gnome.nautilus.preferences always-use-location-entry true
 
+
++ Enable multilibs in pacman: sudo nano /etc/pacman.conf and uncomment:
+		[multilib]
+		Include = /etc/pacman.d/mirrorlist
 + Pacman command options:
 - Update:
 	sudo pacman -Sy
@@ -495,9 +499,6 @@ sudo umount /dev/disk/by-uuid/629dbc70-4f52-4f00-b77a-0ba5e93262ec
 sudo udisksctl power-off -b /dev/disk/by-uuid/629dbc70-4f52-4f00-b77a-0ba5e93262ec
 
 + Wine:
-	Enable multilibs in pacman: sudo nano /etc/pacman.conf and uncomment:
-		[multilib]
-		Include = /etc/pacman.d/mirrorlist
 	sudo pacman -S lib32-gcc-libs lib32-libpulse 
 	yay -S wine-stable wine-stable-mono 
 
