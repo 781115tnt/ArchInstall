@@ -13,8 +13,6 @@ sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm
 
 + Install other apps:
 	#sudo pacman -S gnome-boxes
-	#yay -S  ibus-bamboo ibus-daemon 
-
 	yay -S debtap freedownloadmanager adwaita-qt5 adwaita-qt6 brave-bin
 	sudo debtap -u
 	//Incase of any of the above packages can't be install, download it and then use: debtab pkgname.deb to create an pkgname.zst.  Then we can use: sudo pacman -U pkgname.zst to install the package.
@@ -23,6 +21,9 @@ sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm
 	#sudo pacman -S ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts ttf-hannom otf-ipafont ttf-hanazono ttf-sazanami adobe-source-han-sans-kr-fonts ttf-baekmuk ttf-indic-otf ttf-khmer noto-fonts noto-fonts-extra noto-fonts-extra 
 	
 	#sudo pacman -S adobe-source-han-sans-hk-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-hk-fonts adobe-source-han-serif-kr-fonts adobe-source-han-serif-tw-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-hk-fonts adobe-source-han-serif-cn-fonts adobe-source-han-serif-tw-fonts adobe-source-han-serif-hk-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts
+
++ Copy  fonts
+sudo cp -R Roboto-Condensed /usr/share/fonts/
 
 + Change CPU Error M910q E-2286M:  
 sudo nano /etc/default/grub edit: GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash mce=nobootlog "
@@ -98,14 +99,19 @@ glxinfo | grep "direct rendering"
 	cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
 
 
-+ Đánh tiếng Việt: restart/logout rồi thêm keyboard Vietnamese(Bamboo)
++ Đánh tiếng Việt: 
+	yay -S  ibus-bamboo ibus-daemon 
+restart/logout rồi thêm keyboard Vietnamese(Bamboo)
 env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
 	
-+ Settup fonts
-sudo cp -R Roboto-Condensed /usr/share/fonts/
 
+################# GNOME SETTINGS #################
 + Use gnome-tweaks to select icons Papirus-Dark, set window titlebar, system fonts...
-
++ Use dconf app to change Gnome settings if needed
++ Use dconf command to:
+	- Reset all gnome: dconf reset -f /
+	- Dump all settings: dconf dump / > dconf.dump
+	- Load settings: dconf load / < dconf.dump
 
 + Bluetooth:
 	Get status: systemctl status bluetooth
@@ -119,11 +125,6 @@ sudo cp -R Roboto-Condensed /usr/share/fonts/
 		- then update mime-cache: 
 			update-mime-database ~/.local/share/mime # personal
 			sudo update-mime-database /usr/share/mime     # system-wide
-
-################# DCONF #################
-+ Reset all gnome: dconf reset -f /
-+ Dump all settings: dconf dump / > dconf.dump
-+ Load settings: dconf load / < dconf.dump
 
 ################# PACMAN #################
 + Update Arch keyring: sudo pacman -Sy archlinux-keyring
