@@ -8,7 +8,7 @@ window-width=1299
 [org/gnome/Console]
 font-scale=1.0
 last-window-maximised=false
-last-window-size=(2268, 1249)
+last-window-size=(1057, 620)
 
 [org/gnome/Extensions]
 window-height=960
@@ -46,7 +46,7 @@ window-size=(360, 610)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='sound'
 window-state=(1080, 1227, false)
 
 [org/gnome/desktop/a11y]
@@ -56,11 +56,16 @@ always-show-universal-access-status=true
 screen-keyboard-enabled=false
 
 [org/gnome/desktop/app-folders]
-folder-children=['Utilities', 'YaST', 'Pardus', 'b401dc00-1c8b-4543-99d2-a0fad2197e53', '4fe1e75a-5c55-4ade-859f-637897c335ac']
+folder-children=['Utilities', 'YaST', 'Pardus', 'b401dc00-1c8b-4543-99d2-a0fad2197e53', '4fe1e75a-5c55-4ade-859f-637897c335ac', '853b8f9f-8d61-4e25-9ab2-95b6875eb907']
 
 [org/gnome/desktop/app-folders/folders/4fe1e75a-5c55-4ade-859f-637897c335ac]
 apps=['libreoffice-startcenter.desktop', 'libreoffice-base.desktop', 'libreoffice-writer.desktop', 'libreoffice-math.desktop', 'libreoffice-draw.desktop', 'libreoffice-calc.desktop', 'libreoffice-impress.desktop']
 name='Office'
+
+[org/gnome/desktop/app-folders/folders/853b8f9f-8d61-4e25-9ab2-95b6875eb907]
+apps=['wine-Programs-DipTrace-DipTrace Launcher.desktop', 'wine-Programs-DipTrace-Pattern Editor.desktop', 'wine-Programs-DipTrace-PCB Layout.desktop', 'wine-Programs-DipTrace-Schematic.desktop', 'wine-Programs-DipTrace-Component Editor.desktop', 'wine-Programs-DipTrace-Tutorial.desktop']
+name='Diptrace 4.3'
+translate=false
 
 [org/gnome/desktop/app-folders/folders/Pardus]
 categories=['X-Pardus-Apps']
@@ -101,11 +106,11 @@ document-font-name='Roboto Condensed 11'
 font-name='Roboto Condensed 11'
 gtk-theme='Adwaita-dark'
 icon-theme='Papirus-Dark'
-text-scaling-factor=1.25
+text-scaling-factor=1.2
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-console', 'org-qbittorrent-qbittorrent', 'firefox', 'tor-browser', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-baobab', 'timeshift-gtk', 'org-gnome-texteditor']
+application-children=['org-gnome-console', 'org-qbittorrent-qbittorrent', 'firefox', 'tor-browser', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-baobab', 'timeshift-gtk', 'org-gnome-texteditor', 'org-gnome-extensions']
 show-banners=false
 
 [org/gnome/desktop/notifications/application/firefox]
@@ -123,6 +128,9 @@ application-id='org.gnome.Console.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-epiphany]
 application-id='org.gnome.Epiphany.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-extensions]
+application-id='org.gnome.Extensions.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
@@ -137,6 +145,9 @@ application-id='timeshift-gtk.desktop'
 
 [org/gnome/desktop/notifications/application/tor-browser]
 application-id='tor-browser.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
 
 [org/gnome/desktop/peripherals/mouse]
 speed=0.44852941176470584
@@ -153,6 +164,10 @@ secondary-color='#000000'
 
 [org/gnome/desktop/session]
 idle-delay=uint32 180
+
+[org/gnome/desktop/sound]
+event-sounds=true
+theme-name='__custom'
 
 [org/gnome/desktop/wm/preferences]
 button-layout='appmenu:minimize,maximize,close'
@@ -219,7 +234,7 @@ power-button-action='interactive'
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'org.gnome.clocks.desktop': <{'position': <0>}>, 'org.gnome.Snapshot.desktop': <{'position': <1>}>, 'org.gnome.Extensions.desktop': <{'position': <2>}>, 'htop.desktop': <{'position': <3>}>, 'org.gnome.Settings.desktop': <{'position': <4>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>, 'yelp.desktop': <{'position': <7>}>, 'b401dc00-1c8b-4543-99d2-a0fad2197e53': <{'position': <8>}>, '4fe1e75a-5c55-4ade-859f-637897c335ac': <{'position': <9>}>, 'freedownloadmanager.desktop': <{'position': <10>}>, 'timeshift-gtk.desktop': <{'position': <11>}>, 'org.gnome.Boxes.desktop': <{'position': <12>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <13>}>, 'org.gnome.Meld.desktop': <{'position': <14>}>}]
+app-picker-layout=[{'org.gnome.clocks.desktop': <{'position': <0>}>, 'org.gnome.Snapshot.desktop': <{'position': <1>}>, 'org.gnome.Extensions.desktop': <{'position': <2>}>, 'uxterm.desktop': <{'position': <3>}>, 'org.gnome.Settings.desktop': <{'position': <4>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>, 'yelp.desktop': <{'position': <7>}>, 'b401dc00-1c8b-4543-99d2-a0fad2197e53': <{'position': <8>}>, '4fe1e75a-5c55-4ade-859f-637897c335ac': <{'position': <9>}>, 'freedownloadmanager.desktop': <{'position': <10>}>, 'timeshift-gtk.desktop': <{'position': <11>}>, 'xterm.desktop': <{'position': <12>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <13>}>, 'org.gnome.Meld.desktop': <{'position': <14>}>, '853b8f9f-8d61-4e25-9ab2-95b6875eb907': <{'position': <15>}>, 'winegui.desktop': <{'position': <16>}>}]
 disable-user-extensions=false
 disabled-extensions=['rounded-window-corners@fxgn']
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'arch-update@RaphaelRochet', 'clipboard-indicator@tudmotu.com', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com']
