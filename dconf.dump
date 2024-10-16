@@ -1,14 +1,14 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='/org/gnome/nautilus/list-view/default-visible-columns'
-saved-view='/org/gnome/nautilus/list-view/default-visible-columns'
-window-height=500
+saved-pathbar-path='/org/gnome/nautilus/window-state/'
+saved-view='/org/gnome/nautilus/window-state/'
+window-height=874
 window-is-maximized=false
-window-width=540
+window-width=1299
 
 [org/gnome/Console]
-font-scale=1.4000000000000004
+font-scale=1.0
 last-window-maximised=false
-last-window-size=(1126, 718)
+last-window-size=(2268, 1249)
 
 [org/gnome/Extensions]
 window-height=960
@@ -18,14 +18,15 @@ last-save-directory='file:///home/thanhtran/ArchInstall/scripts/@snapshot'
 
 [org/gnome/baobab/ui]
 is-maximized=false
-window-size=(906, 958)
+window-size=(1448, 1153)
 
 [org/gnome/boxes]
 first-run=false
+shared-folders="[<{'uuid': <'bab4bb88-21f0-4dca-b206-90321a31077f'>, 'path': <'/run/media/thanhtran/1TBDATA'>, 'name': <'1TB'>}>]"
 view='icon-view'
 window-maximized=false
 window-position=[26, 23]
-window-size=[768, 600]
+window-size=[1547, 1002]
 
 [org/gnome/calculator]
 accuracy=12
@@ -105,6 +106,7 @@ toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-gnome-console', 'org-qbittorrent-qbittorrent', 'firefox', 'tor-browser', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-baobab', 'timeshift-gtk', 'org-gnome-texteditor']
+show-banners=false
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
@@ -159,10 +161,24 @@ button-layout='appmenu:minimize,maximize,close'
 is-maximized=false
 window-size=(1390, 858)
 
+[org/gnome/evince/default]
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=true
+sidebar-page='thumbnails'
+sidebar-size=182
+sizing-mode='automatic'
+window-ratio=(1.4419970352350906, 1.2095250094494141)
+
 [org/gnome/evolution-data-server]
 migrated=true
 
 [org/gnome/gnome-system-monitor]
+current-tab='resources'
 show-dependencies=false
 show-whose-processes='user'
 window-height=1058
@@ -187,9 +203,10 @@ migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 show-create-link=true
 show-delete-permanently=true
+show-hidden-files=true
 
 [org/gnome/nautilus/window-state]
-initial-size=(1331, 950)
+initial-size=(1331, 792)
 
 [org/gnome/portal/filechooser/brave-browser]
 last-folder-path='/home/thanhtran/Downloads'
@@ -203,8 +220,9 @@ sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
 app-picker-layout=[{'org.gnome.clocks.desktop': <{'position': <0>}>, 'org.gnome.Snapshot.desktop': <{'position': <1>}>, 'org.gnome.Extensions.desktop': <{'position': <2>}>, 'htop.desktop': <{'position': <3>}>, 'org.gnome.Settings.desktop': <{'position': <4>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>, 'yelp.desktop': <{'position': <7>}>, 'b401dc00-1c8b-4543-99d2-a0fad2197e53': <{'position': <8>}>, '4fe1e75a-5c55-4ade-859f-637897c335ac': <{'position': <9>}>, 'freedownloadmanager.desktop': <{'position': <10>}>, 'timeshift-gtk.desktop': <{'position': <11>}>, 'org.gnome.Boxes.desktop': <{'position': <12>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <13>}>, 'org.gnome.Meld.desktop': <{'position': <14>}>}]
+disable-user-extensions=false
 disabled-extensions=['rounded-window-corners@fxgn']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'arch-update@RaphaelRochet', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com', 'clipboard-indicator@tudmotu.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'arch-update@RaphaelRochet', 'clipboard-indicator@tudmotu.com', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com']
 favorite-apps=['org.gnome.Calculator.desktop', 'org.gnome.Console.desktop', 'org.gnome.DiskUtility.desktop', 'vlc.desktop', 'smplayer.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'brave-browser.desktop', 'firefox.desktop']
 welcome-dialog-last-shown-version='46.3.1'
 
@@ -288,10 +306,10 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=159
+sidebar-width=165
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(813, 104)
+window-position=(26, 23)
 window-size=(1747, 1289)
