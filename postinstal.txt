@@ -1,80 +1,28 @@
-+ Update Arch keyring: sudo pacman -Sy archlinux-keyring
-
-+ Keep GNOME 46:
-	sudo nano sudo nano /etc/pacman.d/mirrorlist:
-		Server = https://archive.archlinux.org/repos/2024/08/01/$repo/os/$arch
-	sudo nano /etc/pacman.conf add:
-		IgnorePkg   = mutter tracker3 tinysparql
-		IgnoreGroup = gnome
-
+################# BASIC SYSTEM INSTALLATIONS #################
 + Remove unused apps
 sudo pacman -R gnome-calendar gnome-contacts simple-scan gnome-maps gnome-music gnome-software totem gnome-weather gnome-tour gnome-connections
 
 + Install more apps
-sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm tldr papirus-icon-theme cdrkit yad iotop unrar libsass sassc dmidecode cpupower ntfs-3g clamav wireless-regdb pdfgrep foliate calibre gnome-epub-thumbnailer pdftk meld qbittorrent timeshift btrfs-progs syslinux ripgrep-all gnome-themes-extra gnome-browser-connector dictd gnome-dictionary mesa-utils libreoffice-fresh gnome-terminal pacman-contrib
+sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm tldr papirus-icon-theme cdrkit yad iotop unrar libsass sassc dmidecode cpupower ntfs-3g clamav wireless-regdb pdfgrep foliate calibre gnome-epub-thumbnailer pdftk meld qbittorrent timeshift btrfs-progs syslinux ripgrep-all gnome-themes-extra gnome-browser-connector dictd gnome-dictionary mesa-utils libreoffice-fresh gnome-terminal pacman-contrib noto-fonts-cjk
 
-
-+ Install yay
++ Install yay if needed:
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
 	yay --version
 
++ Install other apps:
+	#sudo pacman -S gnome-boxes
+	#yay -S  ibus-bamboo ibus-daemon 
 
-#sudo pacman -S gnome-boxes
-#yay -S  ibus-bamboo ibus-daemon 
+	yay -S debtap freedownloadmanager adwaita-qt5 adwaita-qt6 brave-bin
+	sudo debtap -u
+	//Incase of any of the above packages can't be install, download it and then use: debtab pkgname.deb to create an pkgname.zst.  Then we can use: sudo pacman -U pkgname.zst to install the package.
 
-yay -S debtap freedownloadmanager adwaita-qt5 adwaita-qt6 brave-bin
-sudo debtap -u
-//Incase of any of the above packages can't be install, download it and then use: debtab pkgname.deb to create an pkgname.zst.  Then we can use: sudo pacman -U pkgname.zst to install the package.
-
-+ For intel VGA: 
-#sudo pacman -S intel-media-driver mesa-vdpau libva-mesa-driver libva-vdpau-driver
-#sudo pacman -R xf86-video-ati xf86-video-amdgpu xf86-video-nouveau xf86-video-voodoo
-
-+ For AMD:
-#sudo pacman -S xf86-video-amdgpu vulkan-radeon vulkan-mesa-layers
-
-+ To verify hardware rendering: reboot then
-glxinfo | grep "direct rendering"
-
-+ Asian fonts:
-sudo pacman -S noto-fonts-cjk
-
-#sudo pacman -S ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts ttf-hannom otf-ipafont ttf-hanazono ttf-sazanami adobe-source-han-sans-kr-fonts ttf-baekmuk ttf-indic-otf ttf-khmer noto-fonts noto-fonts-extra noto-fonts-extra 
-
-#sudo pacman -S adobe-source-han-sans-hk-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-hk-fonts adobe-source-han-serif-kr-fonts adobe-source-han-serif-tw-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-hk-fonts adobe-source-han-serif-cn-fonts adobe-source-han-serif-tw-fonts adobe-source-han-serif-hk-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts
-
-+ Gnome shell extensions - disable version validation:
-	gsettings set org.gnome.shell disable-extension-version-validation "true"
-	gsettings set org.gnome.mutter center-new-windows "true"
-+ Gnome shell extensions: (using Firefox with Gnome extensions for only current users - safer!!!)
-	AppIndicator and KStatusNotifierItem Support by 3v1n0
-	Dash to Panel by charlesg99
-	Gtk4 Desktop Icons NG (DING) by smedius
-	Arch Linux Updates Indicator by RaphaelR
-	Rounded Window Corners Reborn by flexagoon
-	Clipboard Indicator by Tudmotu
-	Tiling Assistant by Leleat
-	CHC-E (Custom Hot Corners - Extended) by GdH
-
-	Dash to Dock by michele_g
-	DashBar task bar by fthx
-	Hide Top Bar by tuxor1337
-	Rounded Window Corners Reborn by flexagoon
-
-
-To make extensions for all users:
-	sudo pacman -S gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel gnome-shell-extension-desktop-icons-ng
-	yay -S gnome-shell-extension-arch-update 
-	yay -Ss gnome-shell-extension-custom-hot-corners
-	yay -Ss gnome-shell-extension-rounded-window-corners
-	yay -Ss gnome-shell-extension-tiling-assistant
-	yay -Ss gnome-shell-extension-clipboard-indicator
-
-+ Copy Brave settings:
-	cp ./Brave/Local\ State ~/.config/BraveSoftware/Brave-Browser/
-	cp ./Brave/Preferences ~/.config/BraveSoftware/Brave-Browser/Default
++ Install other Asian fonts:
+	#sudo pacman -S ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts ttf-hannom otf-ipafont ttf-hanazono ttf-sazanami adobe-source-han-sans-kr-fonts ttf-baekmuk ttf-indic-otf ttf-khmer noto-fonts noto-fonts-extra noto-fonts-extra 
+	
+	#sudo pacman -S adobe-source-han-sans-hk-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-hk-fonts adobe-source-han-serif-kr-fonts adobe-source-han-serif-tw-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-hk-fonts adobe-source-han-serif-cn-fonts adobe-source-han-serif-tw-fonts adobe-source-han-serif-hk-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts
 
 + Change CPU Error M910q E-2286M:  
 sudo nano /etc/default/grub edit: GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash mce=nobootlog "
@@ -87,20 +35,68 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 - Enable cpupower service: sudo systemctl enable cpupower
 - Start service: sudo systemctl start cpupower
 
+################# DISPLAY DRIVERS #################
++ For intel VGA: 
+#sudo pacman -S intel-media-driver mesa-vdpau libva-mesa-driver libva-vdpau-driver
+#sudo pacman -R xf86-video-ati xf86-video-amdgpu xf86-video-nouveau xf86-video-voodoo
 
++ For AMD:
+#sudo pacman -S xf86-video-amdgpu vulkan-radeon vulkan-mesa-layers
+
++ To verify hardware rendering: reboot then
+glxinfo | grep "direct rendering"
+
+################# GNOME EXTENSIONS #################
++ Gnome shell extensions - disable version validation:
+	gsettings set org.gnome.shell disable-extension-version-validation "true"
+	gsettings set org.gnome.mutter center-new-windows "true"
++ Gnome shell extensions: (using Firefox with Gnome extensions for only current users - safer!!!)
+	AppIndicator and KStatusNotifierItem Support by 3v1n0
+	Dash to Panel by charlesg99
+	CHC-E (Custom Hot Corners - Extended) by GdH
+	
+	Rounded Window Corners Reborn by flexagoon
+	Gtk4 Desktop Icons NG (DING) by smedius
+	Arch Linux Updates Indicator by RaphaelR
+	Clipboard Indicator by Tudmotu
+	Tiling Assistant by Leleat
+
+	Dash to Dock by michele_g
+	DashBar task bar by fthx
+	Hide Top Bar by tuxor1337
+	Rounded Window Corners Reborn by flexagoon
+
++ Install Gnome extention for all users:
+	sudo pacman -S gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel gnome-shell-extension-desktop-icons-ng
+	yay -S gnome-shell-extension-arch-update 
+	yay -Ss gnome-shell-extension-custom-hot-corners
+	yay -Ss gnome-shell-extension-rounded-window-corners
+	yay -Ss gnome-shell-extension-tiling-assistant
+	yay -Ss gnome-shell-extension-clipboard-indicator
+
+################# COPY PRESETTINGS #################
 + QT app theme:
-echo "[Qt]" >> ~/.config/Trolltech.conf
-echo "style=Adwaita-Dark" >> ~/.config/Trolltech.conf
-echo "export QT_STYLE_OVERRIDE=Adwaita-Dark" >> ~/.bash_profile
-echo "export MOZ_ENABLE_WAYLAND=1" >> ~/.bash_profile
+	echo "[Qt]" >> ~/.config/Trolltech.conf
+	echo "style=Adwaita-Dark" >> ~/.config/Trolltech.conf
+	echo "export QT_STYLE_OVERRIDE=Adwaita-Dark" >> ~/.bash_profile
+	echo "export MOZ_ENABLE_WAYLAND=1" >> ~/.bash_profile
 
-echo "export PATH=$PATH:~/firefox" >> ~/.bash_profile
++ Launch Firefox and sign in to Firefox account to load all settings and bookmarks
 
++ Open Brave, and close it and copy Brave's settings:
+	cp ./Brave/Local\ State ~/.config/BraveSoftware/Brave-Browser/
+	cp ./Brave/Preferences ~/.config/BraveSoftware/Brave-Browser/Default
 
-cp -Rf  vlc ~/.config/
-mkdir -p ~/.local/share/vlc/lua/extensions/
-cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
-cp -Rf  smplayer ~/.config/
++ Copy preconfigured vlc smplayer settings
+	cp -Rf  vlc ~/.config/
+	mkdir -p ~/.local/share/vlc/lua/extensions/
+	cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
+	cp -Rf  smplayer ~/.config/
+
++ Copy VLC remove file extension: 
+	mkdir -p ~/.local/share/vlc/lua/extensions/
+	cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
+
 
 + Đánh tiếng Việt: restart/logout rồi thêm keyboard Vietnamese(Bamboo)
 env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
@@ -124,20 +120,63 @@ sudo cp -R Roboto-Condensed /usr/share/fonts/
 			update-mime-database ~/.local/share/mime # personal
 			sudo update-mime-database /usr/share/mime     # system-wide
 
-//to reset all gnome: dconf reset -f /
-//to get out: dconf dump / > dconf.dump
-//to load: dconf load / < dconf.dump
-//dconf load / < dconf.dump
+################# DCONF #################
++ Reset all gnome: dconf reset -f /
++ Dump all settings: dconf dump / > dconf.dump
++ Load settings: dconf load / < dconf.dump
 
-+ VLC remove file: 
-	mkdir -p ~/.local/share/vlc/lua/extensions/
-	cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
-	
+################# PACMAN #################
++ Update Arch keyring: sudo pacman -Sy archlinux-keyring
+
++ Keep using old Arch version (for example keep using lastest GNOME 46 -> use Arch 01/08/2024):
+	sudo nano sudo nano /etc/pacman.d/mirrorlist:
+		Server = https://archive.archlinux.org/repos/2024/08/01/$repo/os/$arch
+	sudo nano /etc/pacman.conf add:
+		IgnorePkg   = mutter tracker3 tinysparql
+		IgnoreGroup = gnome
+
 + List all orphan apps: sudo pacman -Qqtd
 + Use pamac to remove orphan apps or: sudo pacman -Qtdq | sudo pacman -Rns -
 
 + Remove an app and all dependencies:
 	sudo pacman -Rcns app_name
+
++ Enable multilibs in pacman: sudo nano /etc/pacman.conf and uncomment:
+		[multilib]
+		Include = /etc/pacman.d/mirrorlist
++ Pacman command options:
+	- Update:
+		sudo pacman -Sy
+		sudo pacman -Syu
+	- Clear:
+		sudo pacman -Sc
+	- Remove package:
+		sudo pacman -R pkgname
+	- Remove package and all it's dependencies
+		sudo pacman -Rcns pkgname
+	- Install a package
+		sudo pacman -S pkgname
+	- Install local package:
+		sudo pacman -U pkgname
+	- Search for a package:
+		sudo pacman -Ss pkgname
+		pacsearch -n ^name
+		pacsearch -n name
+	- Search for an installed package:
+		sudo pacman -Q pkgname
+		sudo pacman -Qi pkgname
+	- Search all orphans
+		sudo pacman -Qdt
+	- Remove all orphans recursively:
+		sudo pacman -Qtdq | sudo pacman -Rns -
+	- To generate mirror lists go to https://archlinux.org/mirrorlist/
+	- To rank mirrors:
+		sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak 
+		sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.bak > ~/mirrorlist
+		sudo cp ~/mirrorlist /etc/pacman.d/mirrorlist
+		pacman -Syu pacman-mirrorlist
+
+
 
 + Set user become autologin
 
@@ -268,46 +307,13 @@ Check current bitrate: pactl list sink-inputs, pactl list sources
 	gsettings set org.gnome.nautilus.preferences always-use-location-entry true
 
 
-+ Enable multilibs in pacman: sudo nano /etc/pacman.conf and uncomment:
-		[multilib]
-		Include = /etc/pacman.d/mirrorlist
-+ Pacman command options:
-- Update:
-	sudo pacman -Sy
-	sudo pacman -Syu
-- Clear:
-	sudo pacman -Sc
-- Remove package:
-	sudo pacman -R pkgname
-- Remove package and all it's dependencies
-	sudo pacman -Rcns pkgname
-- Install a package
-	sudo pacman -S pkgname
-- Install local package:
-	sudo pacman -U pkgname
+
 	
 sudo pacman -Syu kicad
 # if you want to install the official libraries (recommended):
 sudo pacman -Syu --asdeps kicad-library kicad-library-3d
 --asdeps means the packages are installed as a dependecy of KiCad, meaning they will be uninstalled automatically when uninstalling it.
 
-- Search for a package:
-	sudo pacman -Ss pkgname
-	pacsearch -n ^name
-	pacsearch -n name
-- Search for an installed package:
-	sudo pacman -Q pkgname
-	sudo pacman -Qi pkgname
-- Search all orphans
-	sudo pacman -Qdt
-- Remove all orphans recursively:
-	sudo pacman -Qtdq | sudo pacman -Rns -
-- To generate mirror lists go to https://archlinux.org/mirrorlist/
-- To rank mirrors:
-	sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak 
-	sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.bak > ~/mirrorlist
-	sudo cp ~/mirrorlist /etc/pacman.d/mirrorlist
-	pacman -Syu pacman-mirrorlist
 
 + List all groups:
 	cut -d: -f1 /etc/group
