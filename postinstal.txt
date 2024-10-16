@@ -501,18 +501,19 @@ done
 sudo umount /dev/disk/by-uuid/629dbc70-4f52-4f00-b77a-0ba5e93262ec
 sudo udisksctl power-off -b /dev/disk/by-uuid/629dbc70-4f52-4f00-b77a-0ba5e93262ec
 
-+ Wine:
-	sudo pacman -S lib32-gcc-libs lib32-libpulse 
-	yay -S wine-stable wine-stable-mono 
-
+################# WINE #################
+	yay -S wine-stable wine-stable-mono
+	mkdir -p ~/wine/X64
+	echo "export WINEARCH=win64" >>  .bash_profile
+	echo "export WINEPREFIX=~/wine/X64" >> .bash_profile
+	Logout and then login again
+	winecfg: in Graphics tab, uncheck all Windows settings
 
 
 
 	sudo pacman -S wine winetricks wine-mono lib32-gcc-libs
-	echo "export WINEARCH=win64" >>  .bash_profile
-	echo "export WINEPREFIX=~/wine/X64" >> .bash_profile
-	Logout and then login again
-	wincfg
+
+	
 	winetricks renderer=gl
 	
 	yay -S winegui
