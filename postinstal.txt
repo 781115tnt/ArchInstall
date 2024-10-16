@@ -98,9 +98,9 @@ glxinfo | grep "direct rendering"
 	mkdir -p ~/.local/share/vlc/lua/extensions/
 	cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
 
-################# SOUND SAMPLE RATE #################
+################# SOUND SAMPLE RATE - OLD #################
 + Change default audio sample rate
-Edit /etc/pulse/daemon.conf: default-sample-format = s32le, default-sample-rate = 96000, alternate-sample-rate = 48000
+sudo nano /etc/pulse/daemon.conf: default-sample-format = s32le, default-sample-rate = 96000, alternate-sample-rate = 48000
 Restart audio service: pulseaudio -k
 Check current bitrate: pactl list sink-inputs, pactl list sources
 
