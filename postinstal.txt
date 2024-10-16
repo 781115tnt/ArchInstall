@@ -511,9 +511,7 @@ sudo udisksctl power-off -b /dev/disk/by-uuid/629dbc70-4f52-4f00-b77a-0ba5e93262
 
 
 
-	sudo pacman -S wine winetricks wine-mono lib32-gcc-libs
 
-	
 	winetricks renderer=gl
 	
 	yay -S winegui
