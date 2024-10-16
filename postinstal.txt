@@ -99,11 +99,11 @@ glxinfo | grep "direct rendering"
 	cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
 
 
-+ Đánh tiếng Việt: 
-	yay -S  ibus-bamboo ibus-daemon 
+################# VIETNAMESE KEYBOARD #################
+yay -S  ibus-bamboo ibus-daemon 
 restart/logout rồi thêm keyboard Vietnamese(Bamboo)
-env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
-	
+If needed: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
+
 
 ################# GNOME SETTINGS #################
 + Use gnome-tweaks to select icons Papirus-Dark, set window titlebar, system fonts...
