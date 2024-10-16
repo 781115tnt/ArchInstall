@@ -98,6 +98,11 @@ glxinfo | grep "direct rendering"
 	mkdir -p ~/.local/share/vlc/lua/extensions/
 	cp vlc-delete.lua ~/.local/share/vlc/lua/extensions/
 
+################# SOUND SAMPLE RATE #################
++ Change default audio sample rate
+Edit /etc/pulse/daemon.conf: default-sample-format = s32le, default-sample-rate = 96000, alternate-sample-rate = 48000
+Restart audio service: pulseaudio -k
+Check current bitrate: pactl list sink-inputs, pactl list sources
 
 ################# VIETNAMESE KEYBOARD #################
 yay -S  ibus-bamboo ibus-daemon 
@@ -112,19 +117,22 @@ If needed: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engi
 	- Reset all gnome: dconf reset -f /
 	- Dump all settings: dconf dump / > dconf.dump
 	- Load settings: dconf load / < dconf.dump
-
-+ Bluetooth:
-	Get status: systemctl status bluetooth
-	Enable service: sudo systemctl enable bluetooth
-	Start service: sudo systemctl start bluetooth
-	
-
 + Gnome app grid:
 	Remove app icon:
 		- can be removed by removing .desktop files in ~/.local/share/applications or in /usr/share/applications
 		- then update mime-cache: 
 			update-mime-database ~/.local/share/mime # personal
 			sudo update-mime-database /usr/share/mime     # system-wide
+
+################# BLUETOOTH SERVICE #################
+	Get status: systemctl status bluetooth
+	Enable service: sudo systemctl enable bluetooth
+	Start service: sudo systemctl start bluetooth
+
+################# CREATING SNAPSHOT FOR CURRENT SYSTEM #################
++ To make Timeshift work, UUID shoud be used in /etc/fstab:
+	- To generate UUID fstab version: genfstab -U /
+	- Then replace all items in fstab using UUID
 
 ################# PACMAN #################
 + Update Arch keyring: sudo pacman -Sy archlinux-keyring
@@ -138,10 +146,8 @@ If needed: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engi
 
 + List all orphan apps: sudo pacman -Qqtd
 + Use pamac to remove orphan apps or: sudo pacman -Qtdq | sudo pacman -Rns -
-
 + Remove an app and all dependencies:
 	sudo pacman -Rcns app_name
-
 + Enable multilibs in pacman: sudo nano /etc/pacman.conf and uncomment:
 		[multilib]
 		Include = /etc/pacman.d/mirrorlist
@@ -177,13 +183,7 @@ If needed: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engi
 		sudo cp ~/mirrorlist /etc/pacman.d/mirrorlist
 		pacman -Syu pacman-mirrorlist
 
-
-
-+ Set user become autologin
-
-+ To make Timeshift work, make sure /etc/fstab use all UUID instead of label
-
-
+################# SSD/HDD SETTINGS #################
 + HDD standby settings:
 	- Enable standby: sudo hdparm --yes-i-know-what-i-am-doing -s 1 /dev/sdx
 	- Disable standby: sudo hdparm -s 0 /dev/sdx
@@ -212,7 +212,7 @@ nofail,rw,noatime,nodiratime,compress=zstd:3,noacl,space_cache=v2,autodefrag,com
 nofail,rw,noatime,nodiratime,nodev,nosuid,noacl,space_cache=v2,autodefrag
 + mount options for root SSD btrfs: nofail,rw,noatime,compress=zstd:3,ssd,space_cache=v2,commit=120
 
-genfstab /
+genfstab -U /
 
 Reload fstab: 
 	sudo systemctl daemon-reload
@@ -229,8 +229,7 @@ sudo sensors-detect
 	Reboot and check if scheduler is correct by: grep "" /sys/block/*/queue/scheduler
 	This will show default scheduler in []
 
-
-+ Virt-manager
+################# VIRT MANAGER #################
 sudo pacman -S virt-manager dnsmasq bridge-utils qemu-desktop
 - Make current user is in libvirt group
 	sudo usermod -a -G libvirt $(whoami)
@@ -295,10 +294,7 @@ sudo pacman -S virt-manager dnsmasq bridge-utils qemu-desktop
 	</video>
 
 	
-+ Change default audio sample rate
-Edit /etc/pulse/daemon.conf: default-sample-format = s32le, default-sample-rate = 96000, alternate-sample-rate = 48000
-Restart audio service: pulseaudio -k
-Check current bitrate: pactl list sink-inputs, pactl list sources
+
 
 
 
