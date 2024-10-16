@@ -183,6 +183,36 @@ If needed: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engi
 		sudo cp ~/mirrorlist /etc/pacman.d/mirrorlist
 		pacman -Syu pacman-mirrorlist
 
+################# FLATPAK #################
++ Add a repository
+    - System-wide
+        flatpak remote-add name location
+    - To add the official repository with a per-user configuration: 
+        flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
++ Delete a repository
+    flatpak remote-delete name
++ List repositories
+    flatpak remotes
++ Update data
+    flatpak update
++ Search for a remote runtime or application
+    flatpak search appname
++ List all available runtimes and applications
+    flatpak remote-ls remotename
++ Install a runtime or application
+    flatpak install remote_name appname
++ Uninstall a runtime or application
+    flatpak uninstall name
+    flatpak uninstall --delete-data name
++ List installed runtimes and applications
+    flatpak list
++ Run applications
+    flatpak run name
++ Update a runtime or application
+    flatpak update name
+
+
+
 ################# SSD/HDD SETTINGS #################
 + HDD standby settings:
 	- Enable standby: sudo hdparm --yes-i-know-what-i-am-doing -s 1 /dev/sdx
