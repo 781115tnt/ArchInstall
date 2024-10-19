@@ -6,7 +6,7 @@ window-is-maximized=false
 window-width=1299
 
 [org/gnome/Console]
-font-scale=1.0
+font-scale=1.2000000000000002
 last-window-maximised=false
 last-window-size=(1514, 784)
 
@@ -56,11 +56,16 @@ always-show-universal-access-status=true
 screen-keyboard-enabled=false
 
 [org/gnome/desktop/app-folders]
-folder-children=['Utilities', 'YaST', 'Pardus', 'b401dc00-1c8b-4543-99d2-a0fad2197e53', '4fe1e75a-5c55-4ade-859f-637897c335ac']
+folder-children=['Utilities', 'YaST', 'Pardus', 'b401dc00-1c8b-4543-99d2-a0fad2197e53', '4fe1e75a-5c55-4ade-859f-637897c335ac', '6d94a507-1e0c-4fdb-96a2-5378d5c2428e']
 
 [org/gnome/desktop/app-folders/folders/4fe1e75a-5c55-4ade-859f-637897c335ac]
 apps=['libreoffice-startcenter.desktop', 'libreoffice-base.desktop', 'libreoffice-writer.desktop', 'libreoffice-math.desktop', 'libreoffice-draw.desktop', 'libreoffice-calc.desktop', 'libreoffice-impress.desktop']
 name='Office'
+
+[org/gnome/desktop/app-folders/folders/6d94a507-1e0c-4fdb-96a2-5378d5c2428e]
+apps=['wine-Programs-DipTrace-DipTrace Launcher.desktop', 'wine-Programs-DipTrace-Pattern Editor.desktop', 'wine-Programs-DipTrace-PCB Layout.desktop', 'wine-Programs-DipTrace-Schematic.desktop', 'wine-Programs-DipTrace-Tutorial.desktop', 'wine-Programs-DipTrace-Component Editor.desktop']
+name='Wine Apps'
+translate=false
 
 [org/gnome/desktop/app-folders/folders/Pardus]
 categories=['X-Pardus-Apps']
@@ -101,12 +106,15 @@ document-font-name='Roboto Condensed 11'
 font-name='Roboto Condensed 11'
 gtk-theme='Adwaita-dark'
 icon-theme='Papirus-Dark'
-text-scaling-factor=1.2
+text-scaling-factor=1.25
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-console', 'org-qbittorrent-qbittorrent', 'firefox', 'tor-browser', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-baobab', 'timeshift-gtk', 'org-gnome-texteditor', 'org-gnome-extensions', 'com-usebottles-bottles']
+application-children=['org-gnome-console', 'org-qbittorrent-qbittorrent', 'firefox', 'tor-browser', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-baobab', 'timeshift-gtk', 'org-gnome-texteditor', 'org-gnome-extensions', 'com-usebottles-bottles', 'brave-browser']
 show-banners=false
+
+[org/gnome/desktop/notifications/application/brave-browser]
+application-id='brave-browser.desktop'
 
 [org/gnome/desktop/notifications/application/com-usebottles-bottles]
 application-id='com.usebottles.bottles.desktop'
@@ -145,7 +153,7 @@ application-id='timeshift-gtk.desktop'
 application-id='tor-browser.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=true
+numlock-state=false
 
 [org/gnome/desktop/peripherals/mouse]
 speed=0.44852941176470584
@@ -224,6 +232,7 @@ show-hidden-files=true
 [org/gnome/nautilus/window-state]
 initial-size=(1204, 806)
 initial-size-file-chooser=(988, 1184)
+maximized=false
 
 [org/gnome/portal/filechooser/brave-browser]
 last-folder-path='/home/thanhtran/Downloads'
@@ -239,7 +248,7 @@ power-button-action='interactive'
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'Utilities': <{'position': <0>}>, 'b401dc00-1c8b-4543-99d2-a0fad2197e53': <{'position': <1>}>, '4fe1e75a-5c55-4ade-859f-637897c335ac': <{'position': <2>}>, 'freedownloadmanager.desktop': <{'position': <3>}>, 'timeshift-gtk.desktop': <{'position': <4>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <5>}>, 'org.gnome.Meld.desktop': <{'position': <6>}>}]
+app-picker-layout=[{'Utilities': <{'position': <0>}>, 'b401dc00-1c8b-4543-99d2-a0fad2197e53': <{'position': <1>}>, '4fe1e75a-5c55-4ade-859f-637897c335ac': <{'position': <2>}>, '6d94a507-1e0c-4fdb-96a2-5378d5c2428e': <{'position': <3>}>, 'freedownloadmanager.desktop': <{'position': <4>}>, 'timeshift-gtk.desktop': <{'position': <5>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <6>}>, 'org.gnome.Meld.desktop': <{'position': <7>}>}]
 disable-user-extensions=false
 disabled-extensions=['rounded-window-corners@fxgn']
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'arch-update@RaphaelRochet', 'clipboard-indicator@tudmotu.com', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com']
@@ -331,5 +340,5 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(26, 23)
+window-position=(462, 0)
 window-size=(1747, 1289)
