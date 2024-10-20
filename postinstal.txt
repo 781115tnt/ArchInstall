@@ -420,6 +420,8 @@ sudo pacman -Syu --asdeps kicad-library kicad-library-3d
 + Make iso file
 	mkisofs -allow-leading-dots -ldots -allow-lowercase -allow-multidot -iso-level 4 -no-limit-pathtables -joliet-long -o destination-filename.iso /path/folder
 	for fullname in *; do mkisofs -allow-leading-dots -ldots -allow-lowercase -allow-multidot -iso-level 4 -no-limit-pathtables -joliet-long -o "/run/media/thanhtran/f39e49a2-f224-45e3-a357-c9a4ba982045/VIDEO TUTORIALS/$fullname.iso" "./$fullname"; done
+	for fullname in *; do mkisofs -allow-leading-dots -ldots -allow-lowercase -allow-multidot -iso-level 4 -no-limit-pathtables -joliet-long -o "/run/media/thanhtran/4TBRED/VIDEO TUTORIALS/$fullname.iso" "./$fullname"; done
+
 
 	
 +  If you mount the drive with the -o noacl option, everybody will have full read/write access. If you only want people to be able to read the drive, chmod a+r /mnt/storage
