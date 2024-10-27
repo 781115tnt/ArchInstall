@@ -3,7 +3,7 @@
 sudo pacman -R gnome-calendar gnome-contacts simple-scan gnome-maps gnome-music gnome-software totem gnome-weather gnome-tour gnome-connections
 
 + Install more apps
-sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm tldr papirus-icon-theme cdrkit yad iotop unrar libsass sassc dmidecode cpupower ntfs-3g clamav wireless-regdb pdfgrep foliate calibre gnome-epub-thumbnailer pdftk meld qbittorrent timeshift btrfs-progs syslinux ripgrep-all gnome-themes-extra gnome-browser-connector dictd gnome-dictionary mesa-utils libreoffice-fresh gnome-terminal pacman-contrib noto-fonts-cjk
+sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm tldr papirus-icon-theme cdrkit yad iotop unrar libsass sassc dmidecode cpupower ntfs-3g clamav wireless-regdb pdfgrep foliate calibre gnome-epub-thumbnailer pdftk meld qbittorrent timeshift btrfs-progs syslinux ripgrep-all gnome-themes-extra gnome-browser-connector dictd gnome-dictionary mesa-utils libreoffice-fresh gnome-terminal pacman-contrib smartmontools noto-fonts-cjk
 
 + Install yay if needed:
 	git clone https://aur.archlinux.org/yay.git
@@ -214,6 +214,11 @@ If needed: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engi
 
 
 ################# SSD/HDD SETTINGS #################
++ Get all S.M.A.R.T info:
+	sudo smartctl -A /dev/sdX
+
+
+
 + HDD standby settings:
 	- Enable standby: sudo hdparm --yes-i-know-what-i-am-doing -s 1 /dev/sdx
 	- Disable standby: sudo hdparm -s 0 /dev/sdx
