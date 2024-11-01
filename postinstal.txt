@@ -14,6 +14,7 @@ sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm
 + Install other apps:
 	#sudo pacman -S gnome-boxes
 	yay -S debtap freedownloadmanager adwaita-qt5 adwaita-qt6 brave-bin
+	yay -S woeusb
 	sudo debtap -u
 	//Incase of any of the above packages can't be install, download it and then use: debtab pkgname.deb to create an pkgname.zst.  Then we can use: sudo pacman -U pkgname.zst to install the package.
 
@@ -469,6 +470,8 @@ env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['Bamb
 
 + Create USB Installation:
 	sudo dd bs=4M if=./archlinux-*-x86_64.iso of=/dev/sdc conv=fsync oflag=direct status=progress
++ Create Windows USB Installation:
+	sudo woeusb  --target-filesystem NTFS --device path/to/windows.iso /dev/sdX
 
 
 + Convert epub to pdf:
