@@ -48,6 +48,8 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 glxinfo | grep "direct rendering"
 
 ################# GNOME EXTENSIONS #################
++ Gnome enable/disable animation:
+	gsettings set org.gnome.desktop.interface enable-animations false
 + Gnome shell extensions - disable version validation:
 	gsettings set org.gnome.shell disable-extension-version-validation "true"
 	gsettings set org.gnome.mutter center-new-windows "true"
