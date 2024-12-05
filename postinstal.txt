@@ -214,6 +214,8 @@ If needed: env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engi
     flatpak update name
 
 
+################# C0MPRESS EACH FOLDER INTO ITS OWN COMPRESSED FILE ################
+for i in */; do zip -r "${i%/}.zip" "$i"; done
 
 ################# SSD/HDD SETTINGS #################
 + Get all S.M.A.R.T info:
