@@ -3,7 +3,7 @@
 sudo pacman -R gnome-calendar gnome-contacts simple-scan gnome-maps gnome-music gnome-software totem gnome-weather gnome-tour gnome-connections
 
 + Install more apps
-sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm tldr papirus-icon-theme cdrkit yad iotop unrar libsass sassc dmidecode cpupower ntfs-3g clamav wireless-regdb pdfgrep foliate calibre gnome-epub-thumbnailer pdftk meld qbittorrent timeshift btrfs-progs syslinux ripgrep-all gnome-themes-extra gnome-browser-connector dictd gnome-dictionary mesa-utils libreoffice-fresh gnome-terminal pacman-contrib smartmontools noto-fonts-cjk
+sudo pacman -S gnome-tweaks firefox vlc dconf-editor smplayer exfat-utils hdparm tldr papirus-icon-theme cdrkit yad iotop unrar libsass sassc dmidecode cpupower ntfs-3g clamav wireless-regdb pdfgrep foliate calibre gnome-epub-thumbnailer pdftk meld qbittorrent timeshift btrfs-progs syslinux ripgrep-all gnome-themes-extra gnome-browser-connector dictd gnome-dictionary mesa-utils libreoffice-fresh gnome-terminal pacman-contrib smartmontools noto-fonts-cjk zip
 
 + Install yay if needed:
 	git clone https://aur.archlinux.org/yay.git
