@@ -470,6 +470,9 @@ env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['Bamb
 	Get the entry number by: sudo efibootmgr
 	sudo efibootmgr -b <bootnum> -B
 
++ Rename all files to uppercase:
+	for f in * ; do mv -- "$f" "$(tr [:lower:] [:upper:] <<< "$f")" ; done
+
 
 + Create USB Installation:
 	sudo dd bs=4M if=./archlinux-*-x86_64.iso of=/dev/sdc conv=fsync oflag=direct status=progress
