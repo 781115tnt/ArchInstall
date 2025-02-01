@@ -38,8 +38,8 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ################# DISPLAY DRIVERS #################
 + For intel VGA: 
-sudo pacman -S vulkan-intel intel-media-driver libvdpau-va-gl libva-utils vdpauinfo
-sudo nano /etc/environment and add:
+#sudo pacman -S vulkan-intel intel-media-driver libvdpau-va-gl libva-utils vdpauinfo
+#sudo nano /etc/environment and add:
 	LIBVA_DRIVER_NAME=iHD 
 	VDPAU_DRIVER=va_gl
 #sudo pacman -S intel-media-driver mesa-vdpau libva-mesa-driver libva-vdpau-driver
