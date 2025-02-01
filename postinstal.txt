@@ -530,6 +530,7 @@ done
 	(-q show common files and dirs)
 + Sync files two folders (must have / at the end of source folder path):
 	rsync -auvr --delete "/source_folder/" "/dest_folder"
+	rsync -auvr --delete "/run/media/3TBDATA/Books/" "/run/media/12TBDATA/Books"
 + Find all files have the same size
 	ls -l | awk '$1!~/^d/{if(size[$5]!=""){ print}size[$5]=$8}'
 
