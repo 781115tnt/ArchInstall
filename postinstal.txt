@@ -381,6 +381,14 @@ sudo pacman -Syu --asdeps kicad-library kicad-library-3d
 	for fullname in *.opus; do name=$"${fullname%.*}"; ffmpeg -i "$fullname" -vn -ar 48000 -ac 2 -b:a 320k "$name.mp3"; done
 + ffmpeg add audio to video
 	ffmpeg -i 1.mp4 -i 1a.wav -map 0:v -map 1:a -c:v copy -shortest 'React Course - Beginner Tutorial for React JavaScript Library [2022].mp4'
+
++ Rotate video:
+	ffmpeg -i input.mov -vf "transpose=1" output.mov
+		For the transpose parameter you can pass:
+			0 = 90° counterclockwise and vertical flip (default)
+			1 = 90° clockwise
+			2 = 90° counterclockwise
+			3 = 90° clockwise and vertical flip
 + convert ts to mp4
 	for fullname in *.ts; do name=$"${fullname%.*}"; ffmpeg -i "$fullname" "$name.mp4"; rm "$fullname"; done
 	
