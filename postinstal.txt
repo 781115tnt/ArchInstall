@@ -389,6 +389,8 @@ sudo pacman -Syu --asdeps kicad-library kicad-library-3d
 			1 = 90° clockwise
 			2 = 90° counterclockwise
 			3 = 90° clockwise and vertical flip
+		For mac m4: -c:v h264_videotoolbox
+
 + convert ts to mp4
 	for fullname in *.ts; do name=$"${fullname%.*}"; ffmpeg -i "$fullname" "$name.mp4"; rm "$fullname"; done
 	
